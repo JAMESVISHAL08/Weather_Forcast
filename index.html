@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>7 Day Weather Forecast</title>
+    <link rel="stylesheet" href="hari.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <header class="topbar">
+            <div class="title">
+                <div class="small">7 DAY FORECAST</div>
+                <h1 id="bigLocation">LOCATION</h1>
+                <div id="dateStr" class="date-small">Day, Month, Year</div>
+            </div>
+
+            <div class="current-block">
+                <div class="temp-group">
+                    <div id="bigTemp" class="big-temp">--°C</div>
+                    <div id="bigIcon" class="big-icon"><img src="" alt="" /></div>
+                </div>
+
+                <div class="right-stats">
+                    <div class="stat"><span class="stat-label">Feels like:</span> <span id="feelsLike">--°C</span></div>
+                    <div class="stat"><span class="stat-label">Humidity:</span> <span id="Humidity">--%</span></div>
+                    <div class="stat"><span class="stat-label">Pressure:</span> <span id="pressure">-- MB</span></div>
+                    <div class="stat"><span class="stat-label">Wind:</span> <span id="wind_speed">-- KM/H</span></div>
+                    <div class="stat"><span class="stat-label">Sunrise:</span> <span id="sunrise">--</span></div>
+                    <div class="stat"><span class="stat-label">Sunset:</span> <span id="sunset">--</span></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="card">
+            <div class="controls">
+                <div class="select-wrap">
+                    <label for="cities">Select city</label>
+                    <select id="cities"></select>
+                </div>
+            </div>
+
+            <section id="forecastGrid" class="forecast-grid">
+                <!-- Forecast cards inserted here -->
+            </section>
+
+            <section class="details-panel">
+                <div class="coord"><strong>Coordinates:</strong> <span id="latitude">-</span>, <span id="longitude">-</span></div>
+                <div class="current-details" id="currentDetails">
+                    <p><strong>Condition:</strong> <span id="Condition">-</span></p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="credit">Weather data: weatherapi.com</footer>
+    </div>
+
+    <script src="Script1.js"></script>
+    <script src="Script.js"></script>
+</body>
+
+</html>
